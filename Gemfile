@@ -5,6 +5,8 @@ ruby '2.6.5'
 
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 
+gem 'devise'
+
 gem 'twitter-bootstrap-rails'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
