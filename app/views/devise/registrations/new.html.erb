@@ -4,10 +4,10 @@
   </li>
 <% else %>
   <li>
-    <%= link_to 'Регистрация', new_user_registration_path, :remote => true, 'data-toggle' => "modal",
-                'data-target' => "#myModal", :method => 'get' %>
+    <%= link_to 'Зарегистрироваться', new_user_registration_path, :remote => true, 'data-toggle' => "modal",
+                'data-target' => "#myModal", method: 'get' %>
   </li>
-
+<% end %>
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -51,6 +51,6 @@
           </div>
     </div>
   </div>
-<% end %>
+
 
 

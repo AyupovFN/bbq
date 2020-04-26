@@ -29,7 +29,7 @@
           <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to 'Войти', new_user_session_path %></li>
-          <li><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+          <li><%=  render "partials/registrations" %><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
         <% end %>
       </ul>
     </div>
