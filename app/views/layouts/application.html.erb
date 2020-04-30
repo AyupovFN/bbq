@@ -27,10 +27,11 @@
         <% if user_signed_in? %>
           <li><%= link_to 'Профиль', current_user %></li>
           <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></li>
+
         <% else %>
-          <li><%= link_to 'Войти', new_user_session_path %></li>
+
+          <li><%= render partial: 'partials/sessions' %></li>
           <li><%= render partial: 'partials/registrations' %></li>
-          <%= render partial: 'devise/registrations/new' %>
         <% end %>
       </ul>
     </div>
@@ -42,13 +43,23 @@
     <div class="col-lg-9">
       <%= bootstrap_flash %>
       <%= yield %>
+
+
+
+        <%= render partial: 'devise/registrations/new' %>
+
+        <%= render partial: 'devise/sessions/new' %>
+
+
+
+
     </div>
     <div class="col-lg-3">
     </div><!--/span-->
   </div><!--/row-->
 
   <footer>
-    <p>&copy; Company 2016</p>
+    <p>&copy; ModalCompany 2020</p>
   </footer>
 
 </div> <!-- /container -->
