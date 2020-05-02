@@ -7,6 +7,10 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 
 gem 'devise'
 
+gem 'devise-i18n'
+gem 'russian'
+
+
 gem 'twitter-bootstrap-rails'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'

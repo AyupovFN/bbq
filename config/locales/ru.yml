@@ -1,0 +1,139 @@
+ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+      event: 'Событие'
+      photo: 'Фотография'
+
+    attributes:
+      user:
+        email: 'Email'
+        name: 'Имя'
+        avatar: 'Аватарка'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+      event:
+        title: 'Название'
+        address: 'Место проведения'
+        datetime: 'Дата и время'
+        description: 'Описание'
+        pincode: 'Пин-код доступа'
+      comment:
+        body: 'Текст комментария:'
+        user_name: 'Имя:'
+      subscription:
+        user: 'Пользователь'
+        user_name: 'Имя'
+        user_email: 'Email'
+        can_not_subscribe: 'Вы не можете подписаться на свое событие'
+      photo:
+        photo: 'Фотография'
+
+  controllers:
+    events:
+      created: 'Вы создали новое мероприятие'
+      updated: 'Вы обновили мероприятие'
+      destroyed: 'Вы удалили мероприятие :('
+      wrong_pincode: 'Неверный пин-код!'
+    users:
+      updated: 'Вы обновили свой профиль'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      updated: 'Ваш комментарий обновлен'
+      error: 'Ошибка с комментарием'
+    subscriptions:
+      created: 'Вы подписаны на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
+
+  devise:
+    links:
+      back: 'Назад'
+      delete: 'Удалить'
+      create: 'Создать'
+      forgot_your_password: 'Забыли пароль?'
+      save: 'Сохранить'
+      sign_in: 'Войти'
+      sign_out: 'Выйти'
+      sign_up: 'Регистрация'
+    passwords:
+      edit:
+        change_my_password: 'Изменить мой пароль'
+        change_your_password: 'Изменить пароль'
+        confirm_new_password: 'Повторите новый пароль'
+        new_password: 'Новый пароль'
+      new:
+        forgot_your_password: 'Забыли пароль?'
+        send_me_reset_password_instructions: 'Выслать новый пароль'
+    registrations:
+      edit:
+        are_you_sure: 'Вы уверены?'
+        cancel_my_account: 'Удалить учетную запись'
+        currently_waiting_confirmation_for: 'Ожидается подтверждение адреса E-mail'
+        leave_blank_if_you_don_t_want_to_change_it: 'оставьте поле пустым, если не хотите его менять'
+        minimum_password_length: 'знаков минимум'
+        update: 'Обновить'
+        we_need_your_current_password_to_confirm_your_changes: 'введите текущий пароль для подтверждения изменений'
+      new:
+        sign_up: 'Регистрация'
+
+  messages:
+    not_saved:
+      few: 'Сохранение не удалось из-за %{count} ошибок:'
+      many: 'Сохранение не удалось из-за %{count} ошибок:'
+      one: 'Сохранение не удалось из-за %{count} ошибки:'
+      other: 'Сохранение не удалось из-за %{count} ошибки:'
+
+  user:
+    edit_profile: 'Редактировать профиль'
+    settings: 'Настройки'
+    organized: 'Мероприятия'
+    subscribed: 'Подписки'
+    profile: 'Профиль'
+    user_has_not_organized_any_events_yet: 'Пользователь пока не организовал ни одного события'
+    user_has_not_subscribed_events: 'У пользователя нет подписок'
+  event:
+    change: 'Изменить'
+    event_editing: 'Редактирование события'
+    events: 'События'
+    new_event: 'Создать событие'
+    event_map: 'Место проведения'
+    event_expired: 'Событие прошло'
+    can_not_in_the_past: 'не могут быть ранее текущей даты'
+    pincode_access_only: 'Доступ только по пин-коду'
+    pincode: 'Введите пин-код:'
+    pincode_accept: 'Подтвердить'
+    back: 'На главную'
+  comments:
+    comment:
+      body: 'Текст комментария'
+      comment_editing: 'Редактирование комментария'
+      user_name: 'Имя'
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+      send: 'Отправить'
+      no_comments: 'Комментариев нет'
+      back: 'Вернуться назад'
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+      subscribe: 'Подписаться'
+      show_organizer: 'Организатор'
+      show_subscribed: 'Кто пойдет'
+      email_used: 'уже используется'
+      your_name: 'Введите имя'
+      your_email: 'Введите email'
+  photos:
+    author: 'Автор'
+    upload: 'Загрузить'
+    select: 'Выбрать'
+    add_photos_to_event: 'Добавить фотографии к событию:'
+    destroy_confirm: 'Вы уверены, что хотите удалить фото?'
+  avatars:
+    set_avatar: 'Сменить аватар'
+
+
