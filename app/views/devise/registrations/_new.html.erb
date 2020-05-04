@@ -14,26 +14,26 @@
             </div>
 
             <div>
-              <%= f.label :name %><br />
+              <%= f.label :name, t('activerecord.attributes.user.name')%><br />
               <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control' %>
             </div>
 
-            <div>
-              <%= f.label :password %><br/>
+            <div class="field">
+              <%= f.label :password, t('activerecord.attributes.user.password') %>
               <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %><br />
-              <%= f.password_field :password, autocomplete: "new-password", class: 'form-control'%>
+              <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
             </div>
 
             <div class="form-group">
-              <%= f.label :password_confirmation %><br />
+              <%= f.label :password_confirmation, t('activerecord.attributes.user.password_confirmation') %><br />
               <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
             </div>
         </div>
             <div class="modal-footer">
               <div class="form-group">
-                <%= f.submit "Sign up", class: 'btn btn-primary' %>
+                <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
               </div>
           <% end %>
           </div>

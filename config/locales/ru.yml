@@ -63,6 +63,8 @@ ru:
       sign_in: 'Войти'
       sign_out: 'Выйти'
       sign_up: 'Регистрация'
+      remember_me: 'Запомнить меня'
+
     passwords:
       edit:
         change_my_password: 'Изменить мой пароль'

@@ -31,6 +31,7 @@ module Bbq
     config.generators.system_tests = nil
 
     config.i18n.default_locale = :ru
-    config.i18n.fallbacks = [:en]
+    config.i18n.available_locales = :ru
+    config.i18n.fallbacks = [:ru]
   end
 end
