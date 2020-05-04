@@ -24,7 +24,7 @@ class EventsController < ApplicationController
     if @event.save
       # Используем сообщение из файла локалей ru.yml
       # controllers -> events -> created
-      redirect_to @event, notice: 'controllers.events.created'
+      redirect_to @event, notice: I18n.t('controllers.events.created')
     else
       render :new
     end
@@ -32,7 +32,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      redirect_to @event, notice: 'Event was successfully updated.'
+      redirect_to @event, notice: I18n.t('controllers.events.updated')
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to events_url, notice: 'Event was successfully destroyed.'
+    redirect_to events_url, notice: I18n.t('controllers.events.destroyed')
   end
 
   private
