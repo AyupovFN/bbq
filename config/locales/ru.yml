@@ -113,6 +113,22 @@ ru:
     pincode: 'Введите пин-код:'
     pincode_accept: 'Подтвердить'
     back: 'На главную'
+  confirm:
+    delete: 'Вы точно хотите удалить %{resource}'
+  button:
+    create_event: 'Создать событие'
+    update: 'Изменить'
+    delete: 'Удалить'
+    save: 'Сохранить'
+    submit: 'Отправить'
+  link:
+    back: 'вернуться'
+
+  header:
+    events: 'События'
+    edit_events: 'Редактирование события'
+
+  or: или
   comments:
     comment:
       body: 'Текст комментария'
