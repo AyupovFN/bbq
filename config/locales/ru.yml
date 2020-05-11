@@ -25,7 +25,7 @@ ru:
         user: 'Пользователь'
         user_name: 'Имя'
         user_email: 'Email'
-        can_not_subscribe: 'Вы не можете подписаться на свое событие'
+        can_not_subscribe: 'Вы не можете подписываться на свое событие'
       photo:
         photo: 'Фотография'
 
