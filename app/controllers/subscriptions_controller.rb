@@ -7,23 +7,24 @@ class SubscriptionsController < ApplicationController
     # Болванка для новой подписки
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
-
-    if @new_subscription.save
+    if @new_subscription.user == @event.user
+      redirect_to @event, alert: t('activerecord.attributes.subscription.can_not_subscribe')
+    elsif @new_subscription.save
       # Если сохранилась успешно, редирект на страницу самого события
-      redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
+      redirect_to @event, notice: t('controllers.subscriptions.created')
     else
       # если ошибки — рендерим здесь же шаблон события
-      render 'events/show', alert: I18n.t('controllers.subscriptions.error')
+      render 'events/show', alert: t('controllers.subscriptions.error')
     end
   end
 
   def destroy
-    message = {notice: I18n.t('controllers.subscriptions.destroyed')}
+    message = {notice: t('controllers.subscriptions.destroyed')}
 
     if current_user_can_edit?(@subscription)
       @subscription.destroy
     else
-      message = {alert: I18n.t('controllers.subscriptions.error')}
+      message = {alert: t('controllers.subscriptions.error')}
     end
 
     redirect_to @event, message
