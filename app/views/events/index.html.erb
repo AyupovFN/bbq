@@ -8,3 +8,10 @@
   <%# Рендерим сразу массив событий, каждый в паршиале 'events/event' %>
   <%= render partial: 'events/event', collection: @events %>
 </div>
+
+<div class="pagination pagination-lg justify-content-center">
+  <%= link_to "Last Page", events_path(page: @page - 1)  %>
+  |
+  <%= link_to "Next Page", events_path(page: @page + 1)  %>
+</div>
+

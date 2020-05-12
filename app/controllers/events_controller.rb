@@ -1,11 +1,13 @@
 class EventsController < ApplicationController
+  EVENT_PER_PAGE = 3
   # Задаем объект @event для тех действий, где он нужен
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_event, only: [:show]
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    @page = params.fetch(:page,0).to_i
+    @events = Event.offset(@page * EVENT_PER_PAGE).limit(EVENT_PER_PAGE)
   end
 
   def show
